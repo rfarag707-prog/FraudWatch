@@ -1,0 +1,6 @@
+.venv/
+__pycache__/
+data/*
+!data/README.md
+outputs/
+*.zip
