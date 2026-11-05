@@ -1,0 +1,90 @@
+{
+  "status": "Measured on supplied dataset",
+  "source_file": "paysim.csv",
+  "source_rows": 6362620,
+  "sample_rows": 300000,
+  "seed": 42,
+  "selected_model": "Histogram gradient boosting",
+  "selection_rule": "Highest mean average precision on forward training CV",
+  "best_params": {
+    "Logistic regression": {
+      "model__C": 1.0
+    },
+    "Random forest": {
+      "model__max_depth": 18,
+      "model__min_samples_leaf": 5
+    },
+    "Histogram gradient boosting": {
+      "model__l2_regularization": 1.0,
+      "model__max_leaf_nodes": 15
+    }
+  },
+  "threshold": 0.0037456342595840056,
+  "cost_assumptions": {
+    "missed_fraud": 25.0,
+    "false_alarm": 1.0,
+    "unit": "hypothetical units, not currency"
+  },
+  "versions": {
+    "python": "3.13.2",
+    "sklearn": "1.8.0",
+    "pandas": "2.2.3",
+    "numpy": "2.3.5"
+  },
+  "splits": {
+    "train": {
+      "rows": 282622,
+      "fraud": 207,
+      "fraud_rate": 0.0007324270580492672,
+      "start_step": 1.0,
+      "end_step": 419.0
+    },
+    "validation": {
+      "rows": 9066,
+      "fraud": 81,
+      "fraud_rate": 0.008934480476505625,
+      "start_step": 420.0,
+      "end_step": 569.0
+    },
+    "test": {
+      "rows": 8312,
+      "fraud": 90,
+      "fraud_rate": 0.01082771896053898,
+      "start_step": 570.0,
+      "end_step": 741.0
+    }
+  },
+  "validation": {
+    "average_precision": 0.9995590828924162,
+    "roc_auc": 0.9999958779035018,
+    "precision": 0.9642857142857143,
+    "recall": 1.0,
+    "f1": 0.9818181818181818,
+    "tn": 8982,
+    "fp": 3,
+    "fn": 0,
+    "tp": 81,
+    "threshold": 0.0037456342595840056
+  },
+  "insights": [
+    "Training fraud prevalence: 0.0732%. Accuracy alone can conceal missed fraud.",
+    "CASH_OUT is the most common transaction type in the training sample.",
+    "TRANSFER has the highest observed training fraud rate (0.4069%); this is an association.",
+    "Training missing balance cells: 0. Imputation fits inside each fold.",
+    "Large transfers may be legitimate. Amount alone does not establish fraud. Inspect the class-conditional chart."
+  ],
+  "test_selected": {
+    "average_precision": 0.9708251436623248,
+    "roc_auc": 0.9969580258925916,
+    "precision": 0.9555555555555556,
+    "recall": 0.9555555555555556,
+    "f1": 0.9555555555555556,
+    "tn": 8218,
+    "fp": 4,
+    "fn": 4,
+    "tp": 86,
+    "threshold": 0.0037456342595840056,
+    "assumed_cost": 104.0
+  },
+  "duration_seconds": 217.31
+}

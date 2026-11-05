@@ -1,0 +1,71 @@
+<!doctype html><meta charset="utf-8"><title>FraudWatch results</title><style>body{max-width:1000px;margin:40px auto;font:17px Arial;line-height:1.6;color:#14283f}table{border-collapse:collapse;font-size:13px}td,th{padding:8px;border:1px solid #ddd}img{max-width:100%}</style><h1>FraudWatch: measured experiment</h1><p>PaySim simulation. Test results describe this sample only.</p><h2>Model comparison at threshold 0.5</h2><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>model</th>
+      <th>average_precision</th>
+      <th>roc_auc</th>
+      <th>precision</th>
+      <th>recall</th>
+      <th>f1</th>
+      <th>tn</th>
+      <th>fp</th>
+      <th>fn</th>
+      <th>tp</th>
+      <th>threshold</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Baseline</td>
+      <td>0.0108</td>
+      <td>0.5000</td>
+      <td>0.0000</td>
+      <td>0.0000</td>
+      <td>0.0000</td>
+      <td>8222</td>
+      <td>0</td>
+      <td>90</td>
+      <td>0</td>
+      <td>0.5000</td>
+    </tr>
+    <tr>
+      <td>Logistic regression</td>
+      <td>0.8288</td>
+      <td>0.9723</td>
+      <td>0.1558</td>
+      <td>0.9333</td>
+      <td>0.2671</td>
+      <td>7767</td>
+      <td>455</td>
+      <td>6</td>
+      <td>84</td>
+      <td>0.5000</td>
+    </tr>
+    <tr>
+      <td>Random forest</td>
+      <td>0.9448</td>
+      <td>0.9981</td>
+      <td>0.9398</td>
+      <td>0.8667</td>
+      <td>0.9017</td>
+      <td>8217</td>
+      <td>5</td>
+      <td>12</td>
+      <td>78</td>
+      <td>0.5000</td>
+    </tr>
+    <tr>
+      <td>Histogram gradient boosting</td>
+      <td>0.9708</td>
+      <td>0.9970</td>
+      <td>0.9881</td>
+      <td>0.9222</td>
+      <td>0.9540</td>
+      <td>8221</td>
+      <td>1</td>
+      <td>7</td>
+      <td>83</td>
+      <td>0.5000</td>
+    </tr>
+  </tbody>
+</table><h2>Selected policy</h2><p>{&#x27;average_precision&#x27;: 0.9708251436623248, &#x27;roc_auc&#x27;: 0.9969580258925916, &#x27;precision&#x27;: 0.9555555555555556, &#x27;recall&#x27;: 0.9555555555555556, &#x27;f1&#x27;: 0.9555555555555556, &#x27;tn&#x27;: 8218, &#x27;fp&#x27;: 4, &#x27;fn&#x27;: 4, &#x27;tp&#x27;: 86, &#x27;threshold&#x27;: 0.0037456342595840056, &#x27;assumed_cost&#x27;: 104.0}</p><img src="eda.png" alt="eda.png"><img src="correlations.png" alt="correlations.png"><img src="precision_recall.png" alt="precision_recall.png"><img src="confusion_matrix.png" alt="confusion_matrix.png"><h2>Limitations</h2><p>Uncalibrated scores, simulated data, uniform-sample uncertainty and repeated-account dependence. No measured savings or production readiness claim.</p>

@@ -1,0 +1,5 @@
+,version
+python,3.13.2
+sklearn,1.8.0
+pandas,2.2.3
+numpy,2.3.5

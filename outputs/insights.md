@@ -1,0 +1,5 @@
+- Training fraud prevalence: 0.0732%. Accuracy alone can conceal missed fraud.
+- CASH_OUT is the most common transaction type in the training sample.
+- TRANSFER has the highest observed training fraud rate (0.4069%); this is an association.
+- Training missing balance cells: 0. Imputation fits inside each fold.
+- Large transfers may be legitimate. Amount alone does not establish fraud. Inspect the class-conditional chart.

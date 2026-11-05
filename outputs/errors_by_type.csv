@@ -1,0 +1,10 @@
+type,error,count
+CASH_IN,correct,1878
+CASH_IN,false_alarm,1
+CASH_OUT,correct,2678
+CASH_OUT,false_alarm,2
+CASH_OUT,missed_fraud,4
+DEBIT,correct,59
+PAYMENT,correct,2908
+PAYMENT,false_alarm,1
+TRANSFER,correct,781

@@ -1,0 +1,9 @@
+Draft: review and personalize before posting. Add your actual contribution, team and links.
+
+I built a course prototype for prioritizing suspicious mobile-wallet transactions using PaySim simulation data.
+I compared a baseline and three classifiers with forward validation and preprocessing inside each fold.
+On a held-out temporal test sample, the selected model achieved average precision 0.9708, precision 0.9556, and recall 0.9556 at the validation-selected threshold.
+My main lesson: [write what you learned from the errors].
+These are simulation results, not evidence of real-world fraud prevention.
+Demo: [add URL] | Repository: [add URL]
+#MachineLearning #DataScience #NextGenInstitute
